@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { map } from 'ramda'
 
-import GameWidget from '../components/game_widget'
+import GameWidget from '../components/gameidget'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Dashboard extends Component {
   }
 
   fetchDashboardGames() {
-    axios.get('http://localhost:3000/games')
+    axios.get('http://localhost:4741/games')
       .then(results => this.setState({ dashboardGames: results.data}))
   }
 
